@@ -26,6 +26,15 @@ and workers ("slave") hosts.
 More on the differences between the LSF editions:
 https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/New%20IBM%20Platform%20LSF%20Wiki/page/LSF%20Community%20Edition%20and%20LSF%20Suites%20compared
 
+IBM Spectrum LSF 10.1.0.4 evaluation version
+--------------------------------------------
+```
+cd lsf-eval-10.1.0.4
+cp $DOWNLOAD/lsf10.1_lsfinstall_linux_x86_64.tar.Z .
+cp $DOWNLOAD/lsf10.1_linux2.6-glibc2.3-x86_64.tar.Z .
+docker build .
+```
+
 ---
 Docker notes
 
