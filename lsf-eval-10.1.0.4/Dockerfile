@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 	ed \
         openjdk-8-jdk-headless \
         openssh-server \
+	python3-pip \
 	vim-tiny \
   && rm -rf /var/lib/apt/lists/*
 RUN pip3 install cwltest
