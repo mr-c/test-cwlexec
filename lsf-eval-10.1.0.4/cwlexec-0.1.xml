@@ -1,0 +1,1390 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="36" tests="128" time="1335.0073058605194">
+	<testsuite disabled="0" errors="0" failures="36" name="conformance_test_v1.0" skipped="19" tests="128" time="1335.0073058605194">
+		<testcase class="required" name="General test of command line generation" time="12.923529">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprvsasz1t --quiet v1.0/bwa-mem-tool.cwl v1.0/bwa-mem-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprvsasz1t --quiet v1.0/bwa-mem-tool.cwl v1.0/bwa-mem-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:09:36.005] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(1): Wait condition is never satisfied)
+[09:09:36.007] ERROR - The job (bwa-mem-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test nested prefixes with arrays" time="16.145055">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpjmv8jo4e --quiet v1.0/binding-test.cwl v1.0/bwa-mem-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpjmv8jo4e --quiet v1.0/binding-test.cwl v1.0/bwa-mem-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:09:52.078] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(2): Wait condition is never satisfied)
+[09:09:52.081] ERROR - The job (binding-test) exited.
+</system-err>
+		</testcase>
+		<testcase class="schema_def" name="Test nested command line bindings" time="13.059474">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp1dur7hai --quiet v1.0/tmap-tool.cwl v1.0/tmap-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp1dur7hai --quiet v1.0/tmap-tool.cwl v1.0/tmap-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:10:05.107] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(3): Wait condition is never satisfied)
+[09:10:05.109] ERROR - The job (tmap-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test command line with optional input (missing)" time="11.053184">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp2jdko5jp --quiet v1.0/cat1-testcli.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp2jdko5jp --quiet v1.0/cat1-testcli.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:10:16.155] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(4): Wait condition is never satisfied)
+[09:10:16.157] ERROR - The job (cat1-testcli) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test command line with optional input (provided)" time="9.051295">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpovjrwv0q --quiet v1.0/cat1-testcli.cwl v1.0/cat-n-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpovjrwv0q --quiet v1.0/cat1-testcli.cwl v1.0/cat-n-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:10:25.194] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(5): Wait condition is never satisfied)
+[09:10:25.196] ERROR - The job (cat1-testcli) exited.
+</system-err>
+		</testcase>
+		<testcase class="initial_work_dir, inline_javascript" name="Test InitialWorkDirRequirement ExpressionEngineRequirement.engineConfig feature" time="15.810831">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmppsnj10_o --quiet v1.0/template-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmppsnj10_o --quiet v1.0/template-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:10:41.009] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(6): Wait condition is never satisfied)
+[09:10:41.011] ERROR - The job (template-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test command execution in Docker with stdout redirection" time="22.081829">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpz79i2ft3 --quiet v1.0/cat3-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpz79i2ft3 --quiet v1.0/cat3-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:11:03.138] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(7): Wait condition is never satisfied)
+[09:11:03.141] ERROR - The job (cat3-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test command execution in Docker with simplified syntax stdout redirection" time="12.158149">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp3h19ht1o --quiet v1.0/cat3-tool-shortcut.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp3h19ht1o --quiet v1.0/cat3-tool-shortcut.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:11:15.230] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(8): Wait condition is never satisfied)
+[09:11:15.232] ERROR - The job (cat3-tool-shortcut) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test command execution in Docker with stdout redirection" time="10.070939">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp83uzl369 --quiet v1.0/cat3-tool-mediumcut.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp83uzl369 --quiet v1.0/cat3-tool-mediumcut.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:11:25.300] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(9): Wait condition is never satisfied)
+[09:11:25.302] ERROR - The job (cat3-tool-mediumcut) exited.
+</system-err>
+		</testcase>
+		<testcase class="shell_command" name="Test command line with stderr redirection" time="12.014599">
+			<system-out>{
+  &quot;output_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpjv9l301p/stderr-7d5742e0-52ee-4649-9ebb-d8c54d03b802/error.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpjv9l301p/stderr-7d5742e0-52ee-4649-9ebb-d8c54d03b802/error.txt&quot;,
+    &quot;basename&quot; : &quot;error.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpjv9l301p/stderr-7d5742e0-52ee-4649-9ebb-d8c54d03b802&quot;,
+    &quot;nameroot&quot; : &quot;error&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$f1d2d2f924e986ac86fdf7b36c94bcdf32beec15&quot;,
+    &quot;size&quot; : 4,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test command line with stderr redirection, brief syntax" time="8.989091">
+			<system-out>{
+  &quot;output_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpg3uk8zju/stderr-shortcut-8c987a21-82bc-49ae-9777-948a8073647b/random_stderr_abbb53c4f3&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpg3uk8zju/stderr-shortcut-8c987a21-82bc-49ae-9777-948a8073647b/random_stderr_abbb53c4f3&quot;,
+    &quot;basename&quot; : &quot;random_stderr_abbb53c4f3&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpg3uk8zju/stderr-shortcut-8c987a21-82bc-49ae-9777-948a8073647b&quot;,
+    &quot;checksum&quot; : &quot;sha1$f1d2d2f924e986ac86fdf7b36c94bcdf32beec15&quot;,
+    &quot;size&quot; : 4,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test command line with stderr redirection, named brief syntax" time="10.005425">
+			<system-out>{
+  &quot;output_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpi8w9c7ow/stderr-mediumcut-19a2e645-044f-488c-9594-1ad863438f88/std.err&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpi8w9c7ow/stderr-mediumcut-19a2e645-044f-488c-9594-1ad863438f88/std.err&quot;,
+    &quot;basename&quot; : &quot;std.err&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpi8w9c7ow/stderr-mediumcut-19a2e645-044f-488c-9594-1ad863438f88&quot;,
+    &quot;nameroot&quot; : &quot;std&quot;,
+    &quot;nameext&quot; : &quot;.err&quot;,
+    &quot;checksum&quot; : &quot;sha1$f1d2d2f924e986ac86fdf7b36c94bcdf32beec15&quot;,
+    &quot;size&quot; : 4,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test command execution in Docker with stdin and stdout redirection" time="14.886800">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpe2h4zx1g --quiet v1.0/cat4-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpe2h4zx1g --quiet v1.0/cat4-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:12:11.220] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(13): Wait condition is never satisfied)
+[09:12:11.222] ERROR - The job (cat4-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test default usage of Any in expressions." time="3.342015">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test explicitly passing null to Any type inputs with default values." time="3.325741">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Testing the string 'null' does not trip up an Any with a default value." time="3.350655">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test Any without defaults can be unspecified." time="3.330066">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test explicitly passing null to Any type without a default value." time="3.328184">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Testing the string 'null' does not trip up an Any without a default value." time="3.410892">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Testing Any type compatibility in outputSource" time="3.654160">
+			<system-out>{
+  &quot;output3&quot; : &quot;hello&quot;,
+  &quot;output1&quot; : [ &quot;hello&quot;, &quot;world&quot; ],
+  &quot;output2&quot; : [ &quot;foo&quot;, &quot;bar&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test command execution in with stdin and stdout redirection" time="8.826625">
+			<system-out>{
+  &quot;output&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpb54ugymb/cat-tool-96c62bef-a32f-47d5-9f1c-5fa8f968be5d/output&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpb54ugymb/cat-tool-96c62bef-a32f-47d5-9f1c-5fa8f968be5d/output&quot;,
+    &quot;basename&quot; : &quot;output&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpb54ugymb/cat-tool-96c62bef-a32f-47d5-9f1c-5fa8f968be5d&quot;,
+    &quot;checksum&quot; : &quot;sha1$47a013e660d408619d894b20806b1d5086aab03b&quot;,
+    &quot;size&quot; : 13,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test ExpressionTool with Docker-based expression engine" time="3.389194">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test outputEval to transform output" time="10.021124">
+			<system-out>{
+  &quot;output&quot; : 16
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test two step workflow with imported tools" time="3.447783">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test two step workflow with inline tools" time="3.354542">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="scatter, inline_javascript" name="Test single step workflow with Scatter step" time="15.167600">
+			<system-out>{
+  &quot;count_output&quot; : [ 16, 1 ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, multiple_input, inline_javascript" name="Test single step workflow with Scatter step and two data links connected to
+same input, default merge behavior" time="21.053950">
+			<system-out>{
+  &quot;count_output&quot; : [ 16, 1 ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, multiple_input, inline_javascript" name="Test single step workflow with Scatter step and two data links connected to
+same input, nested merge behavior" time="17.045088">
+			<system-out>{
+  &quot;count_output&quot; : [ 32, 2 ]
+}
+</system-out>
+		</testcase>
+		<testcase class="multiple_input, inline_javascript" name="Test single step workflow with Scatter step and two data links connected to
+same input, flattened merge behavior" time="8.087414">
+			<system-out>{
+  &quot;count_output&quot; : 34
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that no MultipleInputFeatureRequirement is necessary when
+workflow step source is a single-item list" time="10.057142">
+			<system-out>{
+  &quot;count_output&quot; : 32
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test workflow with default value for input parameter (missing)" time="9.567288">
+			<system-out>{
+  &quot;count_output&quot; : 1
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javacscript" name="Test workflow with default value for input parameter (provided)" time="10.552283">
+			<system-out>{
+  &quot;count_output&quot; : 16
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test that workflow defaults override tool defaults" time="8.550437">
+			<system-out>{
+  &quot;default_output&quot; : &quot;workflow_default&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="env_var" name="Test EnvVarRequirement" time="10.777060">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmppxvnv7lh/env-tool1-0efca6d7-a397-45ca-9570-d087b87bf3f5/out&quot;,
+    &quot;path&quot; : &quot;/tmp/tmppxvnv7lh/env-tool1-0efca6d7-a397-45ca-9570-d087b87bf3f5/out&quot;,
+    &quot;basename&quot; : &quot;out&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmppxvnv7lh/env-tool1-0efca6d7-a397-45ca-9570-d087b87bf3f5&quot;,
+    &quot;checksum&quot; : &quot;sha1$b3ec4ed1749c207e52b3a6d08c59f31d83bff519&quot;,
+    &quot;size&quot; : 15,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with single scatter parameter" time="13.063474">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one&quot;, &quot;foo two&quot;, &quot;foo three&quot;, &quot;foo four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters and nested_crossproduct join method" time="20.151534">
+			<system-out>{
+  &quot;out&quot; : [ [ &quot;foo one three&quot;, &quot;foo one four&quot; ], [ &quot;foo two three&quot;, &quot;foo two four&quot; ] ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters and flat_crossproduct join method" time="13.064084">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one three&quot;, &quot;foo one four&quot;, &quot;foo two three&quot;, &quot;foo two four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters and dotproduct join method" time="16.062203">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one three&quot;, &quot;foo two four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with single empty list parameter" time="10.079659">
+			<system-out>{
+  &quot;out&quot; : [ ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters and nested_crossproduct join method with second list empty" time="7.089788">
+			<system-out>{
+  &quot;out&quot; : [ [ ], [ ] ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters and nested_crossproduct join method with first list empty" time="10.019520">
+			<system-out>{
+  &quot;out&quot; : [ ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two scatter parameters, one of which is empty and flat_crossproduct join method" time="9.052008">
+			<system-out>{
+  &quot;out&quot; : [ ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter" name="Test workflow scatter with two empty scatter parameters and dotproduct join method" time="7.042495">
+			<system-out>{
+  &quot;out&quot; : [ ]
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test Any type input parameter" time="13.015166">
+			<system-out>{
+  &quot;out&quot; : &quot;hello test env\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="subworkflow" name="Test nested workflow" time="3.329147">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="env_var" name="Test requirement priority" time="10.809310">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp9cp1m5w0/env-wf1-be607322-b39a-4fb7-8465-9840c10b617d/out&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp9cp1m5w0/env-wf1-be607322-b39a-4fb7-8465-9840c10b617d/out&quot;,
+    &quot;basename&quot; : &quot;out&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp9cp1m5w0/env-wf1-be607322-b39a-4fb7-8465-9840c10b617d&quot;,
+    &quot;checksum&quot; : &quot;sha1$b3ec4ed1749c207e52b3a6d08c59f31d83bff519&quot;,
+    &quot;size&quot; : 15,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="env_var" name="Test requirements override hints" time="7.863632">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpakfj_r80/env-wf2-a0f88cd2-7019-4c2c-ad8e-b2a689146e0e/out&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpakfj_r80/env-wf2-a0f88cd2-7019-4c2c-ad8e-b2a689146e0e/out&quot;,
+    &quot;basename&quot; : &quot;out&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpakfj_r80/env-wf2-a0f88cd2-7019-4c2c-ad8e-b2a689146e0e&quot;,
+    &quot;checksum&quot; : &quot;sha1$cdc1e84968261d6a7575b5305945471f8be199b6&quot;,
+    &quot;size&quot; : 9,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="env_var" name="Test requirements on workflow steps" time="11.084365">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpv2ccwkpe/env-wf3-9b7a454b-b8bd-4e1c-b16d-0a5103223b67/out&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpv2ccwkpe/env-wf3-9b7a454b-b8bd-4e1c-b16d-0a5103223b67/out&quot;,
+    &quot;basename&quot; : &quot;out&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpv2ccwkpe/env-wf3-9b7a454b-b8bd-4e1c-b16d-0a5103223b67&quot;,
+    &quot;checksum&quot; : &quot;sha1$cdc1e84968261d6a7575b5305945471f8be199b6&quot;,
+    &quot;size&quot; : 9,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test default value on step input parameter" time="3.363537">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test use default value on step input parameter with empty source" time="3.357254">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test use default value on step input parameter with null source" time="3.485758">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test default value on step input parameter overridden by provided source" time="3.359828">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test simple workflow" time="11.110661">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprxol6pjn --quiet v1.0/revsort.cwl v1.0/revsort-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprxol6pjn --quiet v1.0/revsort.cwl v1.0/revsort-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:17:51.327] ERROR - The workflow (revsort) exited with &lt;127&gt;.
+[09:17:51.329] WARN  - killing waiting job (sorted) &lt;59&gt;.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test unknown hints are ignored." time="12.116418">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprf53unaz --quiet v1.0/cat5-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmprf53unaz --quiet v1.0/cat5-tool.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:17:55.008] WARN  - The hint &lt;ex:BlibberBlubberFakeRequirement&gt; is unsupported.
+[09:18:03.454] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(60): Wait condition is never satisfied)
+[09:18:03.455] ERROR - The job (cat5-tool) exited.
+</system-err>
+		</testcase>
+		<testcase class="initial_work_dir, inline_javascript" name="Test InitialWorkDirRequirement linking input files and capturing secondaryFiles
+on input and output." time="12.972598">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpf0ayavor --quiet v1.0/search.cwl#main v1.0/search-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpf0ayavor --quiet v1.0/search.cwl#main v1.0/search-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:18:16.425] ERROR - The workflow (search) exited with &lt;127&gt;.
+[09:18:16.427] WARN  - killing waiting job (search) &lt;62&gt;.
+</system-err>
+		</testcase>
+		<testcase class="initial_work_dir" name="Test InitialWorkDirRequirement with expression in filename." time="9.980140">
+			<system-out>{
+  &quot;outfile&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpp5zdkqth/rename-7acaeaf0-6dac-4ea9-9938-e1ce0b38803c/fish.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpp5zdkqth/rename-7acaeaf0-6dac-4ea9-9938-e1ce0b38803c/fish.txt&quot;,
+    &quot;basename&quot; : &quot;fish.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpp5zdkqth/rename-7acaeaf0-6dac-4ea9-9938-e1ce0b38803c&quot;,
+    &quot;nameroot&quot; : &quot;fish&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$327fc7aedf4f6b69a42a7c8b808dc5a7aff61376&quot;,
+    &quot;size&quot; : 1111,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test if trailing newline is present in file entry in InitialWorkDir" time="9.818802">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpp7ul922v/iwdr-entry-af0691bb-27eb-4e63-954c-744bea5881d5/example.conf&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpp7ul922v/iwdr-entry-af0691bb-27eb-4e63-954c-744bea5881d5/example.conf&quot;,
+    &quot;basename&quot; : &quot;example.conf&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpp7ul922v/iwdr-entry-af0691bb-27eb-4e63-954c-744bea5881d5&quot;,
+    &quot;nameroot&quot; : &quot;example&quot;,
+    &quot;nameext&quot; : &quot;.conf&quot;,
+    &quot;checksum&quot; : &quot;sha1$6a47aa22b2a9d13a66a24b3ee5eaed95ce4753cf&quot;,
+    &quot;size&quot; : 16,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test inline expressions" time="8.096316">
+			<system-out>{
+  &quot;output&quot; : 16
+}
+</system-out>
+		</testcase>
+		<testcase class="schema_def, inline_javascript" name="Test SchemaDefRequirement definition used in tool parameter" time="7.862319">
+			<system-out>{
+  &quot;output&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpa0x1oypq/schemadef-tool-4b476219-3395-41a0-90fd-db0a35c3e312/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpa0x1oypq/schemadef-tool-4b476219-3395-41a0-90fd-db0a35c3e312/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpa0x1oypq/schemadef-tool-4b476219-3395-41a0-90fd-db0a35c3e312&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$f12e6cfe70f3253f70b0dbde17c692e7fb0f1e5e&quot;,
+    &quot;size&quot; : 12,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="schema_def" name="Test SchemaDefRequirement definition used in workflow parameter" time="8.931829">
+			<system-out>{
+  &quot;output&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpn_v4jfx5/schemadef-wf-a118fe22-4419-438b-94f5-59ee03e19cd4/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpn_v4jfx5/schemadef-wf-a118fe22-4419-438b-94f5-59ee03e19cd4/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpn_v4jfx5/schemadef-wf-a118fe22-4419-438b-94f5-59ee03e19cd4&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$f12e6cfe70f3253f70b0dbde17c692e7fb0f1e5e&quot;,
+    &quot;size&quot; : 12,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test parameter evaluation, no support for JS expressions" time="14.102120">
+			<system-out>{
+  &quot;t4&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  },
+  &quot;t5&quot; : &quot;zab1&quot;,
+  &quot;t6&quot; : &quot;zab1&quot;,
+  &quot;t7&quot; : &quot;zab1&quot;,
+  &quot;t8&quot; : &quot;zab1&quot;,
+  &quot;t9&quot; : 2,
+  &quot;t10&quot; : true,
+  &quot;t12&quot; : null,
+  &quot;t11&quot; : true,
+  &quot;t14&quot; : &quot;-zab1&quot;,
+  &quot;t13&quot; : &quot;-zab1&quot;,
+  &quot;t16&quot; : &quot;-zab1&quot;,
+  &quot;t15&quot; : &quot;-zab1&quot;,
+  &quot;t18&quot; : &quot;zab1 zab1&quot;,
+  &quot;t17&quot; : &quot;zab1 zab1&quot;,
+  &quot;t19&quot; : &quot;zab1 zab1&quot;,
+  &quot;t21&quot; : &quot;2 2&quot;,
+  &quot;t20&quot; : &quot;zab1 zab1&quot;,
+  &quot;t23&quot; : &quot;true true&quot;,
+  &quot;t22&quot; : &quot;true true&quot;,
+  &quot;t25&quot; : &quot;b&quot;,
+  &quot;t24&quot; : &quot;null null&quot;,
+  &quot;t27&quot; : null,
+  &quot;t26&quot; : &quot;b b&quot;,
+  &quot;t28&quot; : 3,
+  &quot;t1&quot; : {
+    &quot;bar&quot; : {
+      &quot;b'az&quot; : true,
+      &quot;b\&quot;az&quot; : null,
+      &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+      &quot;baz&quot; : &quot;zab1&quot;,
+      &quot;b az&quot; : 2
+    }
+  },
+  &quot;t2&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  },
+  &quot;t3&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test parameter evaluation, with support for JS expressions" time="13.042370">
+			<system-out>{
+  &quot;t4&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  },
+  &quot;t5&quot; : &quot;zab1&quot;,
+  &quot;t6&quot; : &quot;zab1&quot;,
+  &quot;t7&quot; : &quot;zab1&quot;,
+  &quot;t8&quot; : &quot;zab1&quot;,
+  &quot;t9&quot; : 2,
+  &quot;t10&quot; : true,
+  &quot;t12&quot; : null,
+  &quot;t11&quot; : true,
+  &quot;t14&quot; : &quot;-zab1&quot;,
+  &quot;t13&quot; : &quot;-zab1&quot;,
+  &quot;t16&quot; : &quot;-zab1&quot;,
+  &quot;t15&quot; : &quot;-zab1&quot;,
+  &quot;t18&quot; : &quot;zab1 zab1&quot;,
+  &quot;t17&quot; : &quot;zab1 zab1&quot;,
+  &quot;t19&quot; : &quot;zab1 zab1&quot;,
+  &quot;t21&quot; : &quot;2 2&quot;,
+  &quot;t20&quot; : &quot;zab1 zab1&quot;,
+  &quot;t23&quot; : &quot;true true&quot;,
+  &quot;t22&quot; : &quot;true true&quot;,
+  &quot;t25&quot; : &quot;b&quot;,
+  &quot;t24&quot; : &quot;null null&quot;,
+  &quot;t27&quot; : null,
+  &quot;t26&quot; : &quot;b b&quot;,
+  &quot;t28&quot; : 3,
+  &quot;t1&quot; : {
+    &quot;bar&quot; : {
+      &quot;b'az&quot; : true,
+      &quot;b\&quot;az&quot; : null,
+      &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+      &quot;baz&quot; : &quot;zab1&quot;,
+      &quot;b az&quot; : 2
+    }
+  },
+  &quot;t2&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  },
+  &quot;t3&quot; : {
+    &quot;b'az&quot; : true,
+    &quot;b\&quot;az&quot; : null,
+    &quot;buz&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ],
+    &quot;baz&quot; : &quot;zab1&quot;,
+    &quot;b az&quot; : 2
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test metadata" time="13.067575">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmps7_u7sgn --quiet v1.0/metadata.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmps7_u7sgn --quiet v1.0/metadata.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:19:41.254] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(70): Wait condition is never satisfied)
+[09:19:41.256] ERROR - The job (metadata) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test simple format checking." time="10.089539">
+			<system-out>{
+  &quot;output&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpgandw1s6/formattest-fc380433-60d1-4462-8c7d-03beaa451355/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpgandw1s6/formattest-fc380433-60d1-4462-8c7d-03beaa451355/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpgandw1s6/formattest-fc380433-60d1-4462-8c7d-03beaa451355&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$97fe1b50b4582cebc7d853796ebd62e3e163aa3f&quot;,
+    &quot;size&quot; : 1111,
+    &quot;format&quot; : &quot;http://edamontology.org/format_2330&quot;,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test format checking against ontology using subclassOf." time="9.147341">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpcaqqw664 --quiet v1.0/formattest2.cwl v1.0/formattest2-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpcaqqw664 --quiet v1.0/formattest2.cwl v1.0/formattest2-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:20:00.576] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(72): Wait condition is never satisfied)
+[09:20:00.578] ERROR - The job (formattest2) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test format checking against ontology using equivalentClass." time="12.250535">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpz4p14nx5 --quiet v1.0/formattest3.cwl v1.0/formattest2-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpz4p14nx5 --quiet v1.0/formattest3.cwl v1.0/formattest2-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:20:12.814] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(73): Wait condition is never satisfied)
+[09:20:12.816] ERROR - The job (formattest3) exited.
+</system-err>
+		</testcase>
+		<testcase class="docker" name="Test optional output file and optional secondaryFile on output." time="13.076041">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpihs01b34 --quiet v1.0/optional-output.cwl v1.0/cat-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpihs01b34 --quiet v1.0/optional-output.cwl v1.0/cat-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:20:25.875] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(74): Wait condition is never satisfied)
+[09:20:25.877] ERROR - The job (optional-output) exited.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that second expression in concatenated valueFrom is not ignored" time="8.811815">
+			<system-out>{
+  &quot;out&quot; : &quot;a string\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="step_input, inline_javascript" name="Test valueFrom on workflow step." time="3.443600">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="step_input, inline_javascript, multiple_input" name="Test valueFrom on workflow step with multiple sources" time="10.823023">
+			<system-out>{
+  &quot;val&quot; : &quot;3\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="step_input, inline_javascript" name="Test valueFrom on workflow step referencing other inputs" time="7.854847">
+			<system-out>{
+  &quot;val&quot; : &quot;3\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test record type output binding." time="8.226563">
+			<system-out>{
+  &quot;orec&quot; : {
+    &quot;ofoo&quot; : {
+      &quot;location&quot; : &quot;file:///tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a/foo&quot;,
+      &quot;path&quot; : &quot;/tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a/foo&quot;,
+      &quot;basename&quot; : &quot;foo&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a&quot;,
+      &quot;checksum&quot; : &quot;sha1$327fc7aedf4f6b69a42a7c8b808dc5a7aff61376&quot;,
+      &quot;size&quot; : 1111,
+      &quot;class&quot; : &quot;File&quot;
+    },
+    &quot;obar&quot; : {
+      &quot;location&quot; : &quot;file:///tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a/bar&quot;,
+      &quot;path&quot; : &quot;/tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a/bar&quot;,
+      &quot;basename&quot; : &quot;bar&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmper82qv0x/record-output-1cb27d39-537c-4a65-b384-301608a5ea0a&quot;,
+      &quot;checksum&quot; : &quot;sha1$aeb3d11bdf536511649129f4077d5cda6a324118&quot;,
+      &quot;size&quot; : 12010,
+      &quot;class&quot; : &quot;File&quot;
+    }
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test support for reading cwl.output.json when running in a Docker container
+and just 'path' is provided." time="12.008081">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpkpbm6m4b --quiet v1.0/test-cwl-out.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpkpbm6m4b --quiet v1.0/test-cwl-out.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:21:17.020] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(79): Wait condition is never satisfied)
+[09:21:17.022] ERROR - The job (test-cwl-out) exited.
+</system-err>
+		</testcase>
+		<testcase class="shell_command" name="Test support for reading cwl.output.json when running in a Docker container
+and just 'location' is provided." time="15.872763">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp5mozjfl4 --quiet v1.0/test-cwl-out2.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp5mozjfl4 --quiet v1.0/test-cwl-out2.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:21:32.924] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(80): Wait condition is never satisfied)
+[09:21:32.926] ERROR - The job (test-cwl-out2) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test support for returning multiple glob patterns from expression" time="9.529583">
+			<system-out>{
+  &quot;files&quot; : [ {
+    &quot;location&quot; : &quot;file:///tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/a&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/a&quot;,
+    &quot;basename&quot; : &quot;a&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/b&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/b&quot;,
+    &quot;basename&quot; : &quot;b&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/c&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1/c&quot;,
+    &quot;basename&quot; : &quot;c&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpzr02alv8/glob-expr-list-79bd0a4d-66a5-4a3d-b6af-01427e4b02e1&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  } ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test workflow scatter with single scatter parameter and valueFrom on step input" time="19.422991">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one one&quot;, &quot;foo one two&quot;, &quot;foo one three&quot;, &quot;foo one four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test workflow scatter with two scatter parameters and nested_crossproduct join method and valueFrom on step input" time="13.474124">
+			<system-out>{
+  &quot;out&quot; : [ [ &quot;foo one one three&quot;, &quot;foo one one four&quot; ], [ &quot;foo one two three&quot;, &quot;foo one two four&quot; ] ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test workflow scatter with two scatter parameters and flat_crossproduct join method and valueFrom on step input" time="14.929013">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one one three&quot;, &quot;foo one one four&quot;, &quot;foo one two three&quot;, &quot;foo one two four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test workflow scatter with two scatter parameters and dotproduct join method and valueFrom on step input" time="21.897591">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one one three&quot;, &quot;foo one two four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test workflow scatter with single scatter parameter and valueFrom on step input" time="14.895353">
+			<system-out>{
+  &quot;out&quot; : [ &quot;foo one one&quot;, &quot;foo two two&quot;, &quot;foo three three&quot;, &quot;foo four four&quot; ]
+}
+</system-out>
+		</testcase>
+		<testcase class="scatter, step_input" name="Test valueFrom eval on scattered input parameter" time="14.115343">
+			<system-out>{
+  &quot;out_message&quot; : [ {
+    &quot;location&quot; : &quot;file:///tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc/random_stdout_4c5a66058c_1&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc/random_stdout_4c5a66058c_1&quot;,
+    &quot;basename&quot; : &quot;random_stdout_4c5a66058c_1&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc&quot;,
+    &quot;checksum&quot; : &quot;sha1$98030575f6fc40e5021be5a8803a6bef94aee11f&quot;,
+    &quot;size&quot; : 16,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc/random_stdout_4c5a66058c_2&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc/random_stdout_4c5a66058c_2&quot;,
+    &quot;basename&quot; : &quot;random_stdout_4c5a66058c_2&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpfjji_qyx/scatter-valuefrom-wf6-859f734c-d107-4a58-96ce-d6f0063c4cdc&quot;,
+    &quot;checksum&quot; : &quot;sha1$edcacd50778d98ae113015406b3195c165059dd8&quot;,
+    &quot;size&quot; : 16,
+    &quot;class&quot; : &quot;File&quot;
+  } ]
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test workflow two input files with same name." time="15.889289">
+			<system-out>{
+  &quot;fileout&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpzqg7ookg/conflict-wf-952a7ce6-be6e-4cc2-b033-32e71024c19d/out.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpzqg7ookg/conflict-wf-952a7ce6-be6e-4cc2-b033-32e71024c19d/out.txt&quot;,
+    &quot;basename&quot; : &quot;out.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpzqg7ookg/conflict-wf-952a7ce6-be6e-4cc2-b033-32e71024c19d&quot;,
+    &quot;nameroot&quot; : &quot;out&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$a2d8d6e7b28295dc9977dc3bdb652ddd480995f0&quot;,
+    &quot;size&quot; : 25,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test directory input with parameter reference" time="8.868803">
+			<system-out>{
+  &quot;outlist&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpw7tgoh58/dir-bb7b8665-0529-4af8-9c93-5e74a7be79e2/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpw7tgoh58/dir-bb7b8665-0529-4af8-9c93-5e74a7be79e2/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpw7tgoh58/dir-bb7b8665-0529-4af8-9c93-5e74a7be79e2&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$13cda8661796ae241da3a18668fb552161a72592&quot;,
+    &quot;size&quot; : 20,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test directory input in Docker" time="11.970222">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpkpoi33ix --quiet v1.0/dir2.cwl v1.0/dir-job.yml' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpkpoi33ix --quiet v1.0/dir2.cwl v1.0/dir-job.yml' returned non-zero exit status 127</failure>
+			<system-err>[09:23:57.884] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(112): Wait condition is never satisfied)
+[09:23:57.886] ERROR - The job (dir2) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test directory output" time="16.060552">
+			<system-out>{
+  &quot;outdir&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+    &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+    &quot;basename&quot; : &quot;.&quot;,
+    &quot;listing&quot; : [ {
+      &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./113_out&quot;,
+      &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./113_out&quot;,
+      &quot;basename&quot; : &quot;113_out&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+      &quot;checksum&quot; : &quot;sha1$5949828290d1fb0d8fb84330b840b2c4e67b2825&quot;,
+      &quot;size&quot; : 1712,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./113_err&quot;,
+      &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./113_err&quot;,
+      &quot;basename&quot; : &quot;113_err&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+      &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+      &quot;size&quot; : 0,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./hello.tar&quot;,
+      &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./hello.tar&quot;,
+      &quot;basename&quot; : &quot;hello.tar&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+      &quot;nameroot&quot; : &quot;hello&quot;,
+      &quot;nameext&quot; : &quot;.tar&quot;,
+      &quot;checksum&quot; : &quot;sha1$bf757d2cf23320f3321761286c0d0deea446acf2&quot;,
+      &quot;size&quot; : 10240,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./goodbye.txt&quot;,
+      &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./goodbye.txt&quot;,
+      &quot;basename&quot; : &quot;goodbye.txt&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+      &quot;nameroot&quot; : &quot;goodbye&quot;,
+      &quot;nameext&quot; : &quot;.txt&quot;,
+      &quot;checksum&quot; : &quot;sha1$dd0a4c4c49ba43004d6611771972b6cf969c1c01&quot;,
+      &quot;size&quot; : 24,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./hello.txt&quot;,
+      &quot;path&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/./hello.txt&quot;,
+      &quot;basename&quot; : &quot;hello.txt&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmphxjve409/dir3-87296aa8-5ecd-4ef1-a718-0d275cac7ddb/.&quot;,
+      &quot;nameroot&quot; : &quot;hello&quot;,
+      &quot;nameext&quot; : &quot;.txt&quot;,
+      &quot;checksum&quot; : &quot;sha1$47a013e660d408619d894b20806b1d5086aab03b&quot;,
+      &quot;size&quot; : 13,
+      &quot;class&quot; : &quot;File&quot;
+    } ],
+    &quot;class&quot; : &quot;Directory&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test directories in secondaryFiles" time="9.953944">
+			<system-out>{
+  &quot;outlist&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpq42wqyk3/dir4-d8a2b313-ce97-40e3-8af9-620e60002143/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpq42wqyk3/dir4-d8a2b313-ce97-40e3-8af9-620e60002143/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpq42wqyk3/dir4-d8a2b313-ce97-40e3-8af9-620e60002143&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$13cda8661796ae241da3a18668fb552161a72592&quot;,
+    &quot;size&quot; : 20,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command, initial_work_dir" name="Test dynamic initial work dir" time="13.892028">
+			<system-out>{
+  &quot;outlist&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpalogvn7z/dir5-90b80ae3-93e5-40ee-ab05-cedcbbf147b3/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpalogvn7z/dir5-90b80ae3-93e5-40ee-ab05-cedcbbf147b3/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpalogvn7z/dir5-90b80ae3-93e5-40ee-ab05-cedcbbf147b3&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$13cda8661796ae241da3a18668fb552161a72592&quot;,
+    &quot;size&quot; : 20,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="initial_work_dir" name="Test writable staged files." time="14.899012">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpq9g2ze2b --quiet v1.0/stagefile.cwl v1.0/stagefile-job.yml' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpq9g2ze2b --quiet v1.0/stagefile.cwl v1.0/stagefile-job.yml' returned non-zero exit status 127</failure>
+			<system-err>[09:24:52.728] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(116): Wait condition is never satisfied)
+[09:24:52.730] ERROR - The job (stagefile) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test file literal as input" time="3.411760">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpcgi39zc5 --quiet v1.0/cat3-tool.cwl v1.0/file-literal.yml' returned non-zero exit status 255" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpcgi39zc5 --quiet v1.0/cat3-tool.cwl v1.0/file-literal.yml' returned non-zero exit status 255</failure>
+			<system-err>Failed to write file &quot;/common-workflow-language-master/v1.0/v1.0/file1-64f2ce8cfc&quot;: /common-workflow-language-master/v1.0/v1.0/file1-64f2ce8cfc (Permission denied)
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript, initial_work_dir" name="Test expression in InitialWorkDir listing" time="17.938309">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpn05t23bf --quiet v1.0/linkfile.cwl v1.0/arguments-job.yml' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpn05t23bf --quiet v1.0/linkfile.cwl v1.0/arguments-job.yml' returned non-zero exit status 127</failure>
+			<system-err>[09:25:14.095] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(117): Wait condition is never satisfied)
+[09:25:14.097] ERROR - The job (linkfile) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test nameroot/nameext expression in arguments, stdout" time="10.914636">
+			<system-out>{
+  &quot;b&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp0f79k07t/nameroot-71a48176-1ce4-4634-8a62-6dd1d3d65050/whale.xtx&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp0f79k07t/nameroot-71a48176-1ce4-4634-8a62-6dd1d3d65050/whale.xtx&quot;,
+    &quot;basename&quot; : &quot;whale.xtx&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp0f79k07t/nameroot-71a48176-1ce4-4634-8a62-6dd1d3d65050&quot;,
+    &quot;nameroot&quot; : &quot;whale&quot;,
+    &quot;nameext&quot; : &quot;.xtx&quot;,
+    &quot;checksum&quot; : &quot;sha1$c4cfd130e7578714e3eef91c1d6d90e0e0b9db3e&quot;,
+    &quot;size&quot; : 21,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test directory input with inputBinding" time="10.069446">
+			<system-out>{
+  &quot;outlist&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpq4ueu93w/dir6-f2c698a4-e3f7-4144-bfd7-fecd3b569cb7/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpq4ueu93w/dir6-f2c698a4-e3f7-4144-bfd7-fecd3b569cb7/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpq4ueu93w/dir6-f2c698a4-e3f7-4144-bfd7-fecd3b569cb7&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$13cda8661796ae241da3a18668fb552161a72592&quot;,
+    &quot;size&quot; : 20,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test command line generation of array-of-arrays" time="9.052667">
+			<system-out>{
+  &quot;echo&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpqbnt_g4s/nested-array-f00398b8-e87b-4932-8c8a-2d1079c2b72e/echo.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpqbnt_g4s/nested-array-f00398b8-e87b-4932-8c8a-2d1079c2b72e/echo.txt&quot;,
+    &quot;basename&quot; : &quot;echo.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpqbnt_g4s/nested-array-f00398b8-e87b-4932-8c8a-2d1079c2b72e&quot;,
+    &quot;nameroot&quot; : &quot;echo&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$3f786850e387550fdab836ed7e6dc881de23001b&quot;,
+    &quot;size&quot; : 2,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test $HOME and $TMPDIR are set correctly" time="12.813732">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphzmak9bk --quiet v1.0/envvar.cwl v1.0/empty.json' returned non-zero exit status 1" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphzmak9bk --quiet v1.0/envvar.cwl v1.0/empty.json' returned non-zero exit status 1</failure>
+			<system-err>[09:25:56.952] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(121): Wait condition is never satisfied)
+[09:25:56.954] ERROR - The job (envvar) exited.
+</system-err>
+		</testcase>
+		<testcase class="shell_command" name="Test $HOME and $TMPDIR are set correctly in Docker" time="12.534930">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpvm2oj_n8 --quiet v1.0/envvar2.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpvm2oj_n8 --quiet v1.0/envvar2.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:26:08.841] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(122): Wait condition is never satisfied)
+[09:26:08.843] ERROR - The job (envvar2) exited.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that expressionLib requirement of individual tool step overrides expressionLib of workflow." time="7.921446">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpgc34acdo/js-expr-req-wf-921cff04-b992-4111-8ba4-6e7fa0053e55/whatever.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpgc34acdo/js-expr-req-wf-921cff04-b992-4111-8ba4-6e7fa0053e55/whatever.txt&quot;,
+    &quot;basename&quot; : &quot;whatever.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpgc34acdo/js-expr-req-wf-921cff04-b992-4111-8ba4-6e7fa0053e55&quot;,
+    &quot;nameroot&quot; : &quot;whatever&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$7448d8798a4380162d4b56f9b452e2f6f9e24e7a&quot;,
+    &quot;size&quot; : 2,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="docker, initial_work_dir" name="Test output of InitialWorkDir" time="13.967217">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpf7vifzt9 --quiet v1.0/initialworkdirrequirement-docker-out.cwl v1.0/initialworkdirrequirement-docker-out-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpf7vifzt9 --quiet v1.0/initialworkdirrequirement-docker-out.cwl v1.0/initialworkdirrequirement-docker-out-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:26:31.402] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(124): Wait condition is never satisfied)
+[09:26:31.404] ERROR - The job (initialworkdirrequirement-docker-out) exited.
+</system-err>
+		</testcase>
+		<testcase class="subworkflow" name="Test embedded subworkflow" time="3.431332">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="docker, inline_javascript, shell_command" name="Test secondaryFiles on array of files." time="12.984659">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpajqte1t6 --quiet v1.0/docker-array-secondaryfiles.cwl v1.0/docker-array-secondaryfiles-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpajqte1t6 --quiet v1.0/docker-array-secondaryfiles.cwl v1.0/docker-array-secondaryfiles-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:26:47.812] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(125): Wait condition is never satisfied)
+[09:26:47.814] ERROR - The job (docker-array-secondaryfiles) exited.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test directory literal output created by ExpressionTool" time="3.445551">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test file literal output created by ExpressionTool" time="3.401273">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="docker" name="Test dockerOutputDirectory" time="14.060275">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpa649mkhc --quiet v1.0/docker-output-dir.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpa649mkhc --quiet v1.0/docker-output-dir.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:27:08.730] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(126): Wait condition is never satisfied)
+[09:27:08.735] ERROR - The job (docker-output-dir) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test hints with $import" time="7.022258">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp8xkwmks6/imported-hint-ca7c9b7f-8add-4bba-a6fd-2d660979e628/out&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp8xkwmks6/imported-hint-ca7c9b7f-8add-4bba-a6fd-2d660979e628/out&quot;,
+    &quot;basename&quot; : &quot;out&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp8xkwmks6/imported-hint-ca7c9b7f-8add-4bba-a6fd-2d660979e628&quot;,
+    &quot;checksum&quot; : &quot;sha1$b3ec4ed1749c207e52b3a6d08c59f31d83bff519&quot;,
+    &quot;size&quot; : 15,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test warning instead of error when default path is not found" time="7.926503">
+			<system-out>{ }
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test InlineJavascriptRequirement with multiple expressions in the same tool" time="4.483282">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphhbjxbrk --quiet v1.0/inline-js.cwl v1.0/empty.json' returned non-zero exit status 255" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphhbjxbrk --quiet v1.0/inline-js.cwl v1.0/empty.json' returned non-zero exit status 255</failure>
+		</testcase>
+		<testcase class="inline_javascript, initial_work_dir, shell_command" name="Test if a writable input directory is recursivly copied and writable" time="8.869781">
+			<system-out>{
+  &quot;test_result&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/output.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/output.txt&quot;,
+    &quot;basename&quot; : &quot;output.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb&quot;,
+    &quot;nameroot&quot; : &quot;output&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  },
+  &quot;output_dir&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir&quot;,
+    &quot;basename&quot; : &quot;work_dir&quot;,
+    &quot;listing&quot; : [ {
+      &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/b&quot;,
+      &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/b&quot;,
+      &quot;basename&quot; : &quot;b&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir&quot;,
+      &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+      &quot;size&quot; : 0,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/e&quot;,
+      &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/e&quot;,
+      &quot;basename&quot; : &quot;e&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir&quot;,
+      &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+      &quot;size&quot; : 0,
+      &quot;class&quot; : &quot;File&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/c&quot;,
+      &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/c&quot;,
+      &quot;basename&quot; : &quot;c&quot;,
+      &quot;listing&quot; : [ {
+        &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/c/d&quot;,
+        &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/c/d&quot;,
+        &quot;basename&quot; : &quot;d&quot;,
+        &quot;dirname&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/c&quot;,
+        &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+        &quot;size&quot; : 0,
+        &quot;class&quot; : &quot;File&quot;
+      } ],
+      &quot;class&quot; : &quot;Directory&quot;
+    }, {
+      &quot;location&quot; : &quot;file:///tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/a&quot;,
+      &quot;path&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir/a&quot;,
+      &quot;basename&quot; : &quot;a&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmp2x7e04hx/recursive-input-directory-c6bd2dc5-9637-417a-9863-96472401e2cb/work_dir&quot;,
+      &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+      &quot;size&quot; : 0,
+      &quot;class&quot; : &quot;File&quot;
+    } ],
+    &quot;class&quot; : &quot;Directory&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that missing parameters are null (not undefined) in expression" time="10.901372">
+			<system-out>{
+  &quot;out&quot; : &quot;t\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that provided parameter is not null in expression" time="17.325493">
+			<system-out>{
+  &quot;out&quot; : &quot;f\n&quot;
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test compound workflow document" time="10.834741">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp5cpronhl --quiet v1.0/revsort-packed.cwl#main v1.0/revsort-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp5cpronhl --quiet v1.0/revsort-packed.cwl#main v1.0/revsort-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:28:16.150] ERROR - The workflow (revsort-packed) exited with &lt;127&gt;.
+[09:28:16.152] WARN  - killing waiting job (sorted) &lt;133&gt;.
+</system-err>
+		</testcase>
+		<testcase class="step_input_expression" name="Test that nameroot and nameext are generated from basename at execution time by the runner" time="9.007116">
+			<system-out>{
+  &quot;extFile&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa/random_stdout_944cd67f87&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa/random_stdout_944cd67f87&quot;,
+    &quot;basename&quot; : &quot;random_stdout_944cd67f87&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa&quot;,
+    &quot;checksum&quot; : &quot;sha1$301a72c82a835e1737caf30f94d0eec210c4d9f1&quot;,
+    &quot;size&quot; : 5,
+    &quot;class&quot; : &quot;File&quot;
+  },
+  &quot;rootFile&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa/random_stdout_944cb2f118&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa/random_stdout_944cb2f118&quot;,
+    &quot;basename&quot; : &quot;random_stdout_944cb2f118&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp7qdpkxic/basename-fields-test-3be8969b-02bf-42cc-9802-69746591c3aa&quot;,
+    &quot;checksum&quot; : &quot;sha1$b4a583c391e234cf210e1d576f68f674c8ad7ecd&quot;,
+    &quot;size&quot; : 10,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="initial_work_dir" name="Test that file path in $(inputs) for initialworkdir is in $(outdir)." time="8.986715">
+			<system-out>{ }
+</system-out>
+		</testcase>
+		<testcase class="multiple_input, inline_javascript" name="Test single step workflow with Scatter step and two data links connected to
+same input, flattened merge behavior. Workflow inputs are set as list" time="12.103254">
+			<system-out>{
+  &quot;count_output&quot; : 34
+}
+</system-out>
+		</testcase>
+		<testcase class="step_input, inline_javascript, multiple_input" name="Test step input with multiple sources with multiple types" time="3.358048">
+			<skipped message="Unsupported" type="skipped"/>
+			<system-err>The field [class] with &quot;ExpressionTool&quot; is not supported.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test that shell directives are not interpreted." time="8.097576">
+			<system-out>{
+  &quot;stderr_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33/random_stderr_9c15cf387b&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33/random_stderr_9c15cf387b&quot;,
+    &quot;basename&quot; : &quot;random_stderr_9c15cf387b&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  },
+  &quot;stdout_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33/random_stdout_9c15cc5ea7&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33/random_stdout_9c15cc5ea7&quot;,
+    &quot;basename&quot; : &quot;random_stdout_9c15cc5ea7&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpb1nun4x_/shellchar-2989bc90-aae2-4fa9-96f3-698e11b79c33&quot;,
+    &quot;checksum&quot; : &quot;sha1$1555252d52d4ec3262538a4426a83a99cfff4402&quot;,
+    &quot;size&quot; : 9,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="shell_command" name="Test that shell directives are quoted." time="12.090241">
+			<system-out>{
+  &quot;stderr_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28/random_stderr_9df84f7db5&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28/random_stderr_9df84f7db5&quot;,
+    &quot;basename&quot; : &quot;random_stderr_9df84f7db5&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  },
+  &quot;stdout_file&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28/random_stdout_9df84cad0f&quot;,
+    &quot;path&quot; : &quot;/tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28/random_stdout_9df84cad0f&quot;,
+    &quot;basename&quot; : &quot;random_stdout_9df84cad0f&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmp6h6pk428/shellchar2-a3feb373-37e1-498b-b841-c84235519f28&quot;,
+    &quot;checksum&quot; : &quot;sha1$1555252d52d4ec3262538a4426a83a99cfff4402&quot;,
+    &quot;size&quot; : 9,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript, initial_work_dir" name="Test empty writable dir with InitialWorkDirRequirement" time="9.822404">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpm3xl2mu9/writable-dir-6dd9e138-3ce5-491e-8578-a66c70b747b7/emptyWritableDir&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpm3xl2mu9/writable-dir-6dd9e138-3ce5-491e-8578-a66c70b747b7/emptyWritableDir&quot;,
+    &quot;basename&quot; : &quot;emptyWritableDir&quot;,
+    &quot;listing&quot; : [ {
+      &quot;location&quot; : &quot;file:///tmp/tmpm3xl2mu9/writable-dir-6dd9e138-3ce5-491e-8578-a66c70b747b7/emptyWritableDir/blurg&quot;,
+      &quot;path&quot; : &quot;/tmp/tmpm3xl2mu9/writable-dir-6dd9e138-3ce5-491e-8578-a66c70b747b7/emptyWritableDir/blurg&quot;,
+      &quot;basename&quot; : &quot;blurg&quot;,
+      &quot;dirname&quot; : &quot;/tmp/tmpm3xl2mu9/writable-dir-6dd9e138-3ce5-491e-8578-a66c70b747b7/emptyWritableDir&quot;,
+      &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+      &quot;size&quot; : 0,
+      &quot;class&quot; : &quot;File&quot;
+    } ],
+    &quot;class&quot; : &quot;Directory&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript, initial_work_dir" name="Test empty writable dir with InitialWorkDirRequirement inside Docker" time="12.808088">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpg6g7c1k1 --quiet v1.0/writable-dir-docker.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpg6g7c1k1 --quiet v1.0/writable-dir-docker.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:29:32.364] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(141): Wait condition is never satisfied)
+[09:29:32.366] ERROR - The job (writable-dir-docker) exited.
+</system-err>
+		</testcase>
+		<testcase class="resource" name="Test dynamic resource reqs referencing inputs" time="9.926255">
+			<system-out>{
+  &quot;output&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmptwlt1ko4/dynresreq-32dca5d4-7ddd-425f-8654-710627ca32eb/cores.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmptwlt1ko4/dynresreq-32dca5d4-7ddd-425f-8654-710627ca32eb/cores.txt&quot;,
+    &quot;basename&quot; : &quot;cores.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmptwlt1ko4/dynresreq-32dca5d4-7ddd-425f-8654-710627ca32eb&quot;,
+    &quot;nameroot&quot; : &quot;cores&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$7448d8798a4380162d4b56f9b452e2f6f9e24e7a&quot;,
+    &quot;size&quot; : 2,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test file literal as input without Docker" time="3.369930">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpx3cvqa_x --quiet v1.0/cat3-nodocker.cwl v1.0/file-literal.yml' returned non-zero exit status 255" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpx3cvqa_x --quiet v1.0/cat3-nodocker.cwl v1.0/file-literal.yml' returned non-zero exit status 255</failure>
+			<system-err>Failed to write file &quot;/common-workflow-language-master/v1.0/v1.0/file1-a85ba3c9a5&quot;: /common-workflow-language-master/v1.0/v1.0/file1-a85ba3c9a5 (Permission denied)
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test that OutputBinding.glob is sorted as specified by POSIX" time="10.042038">
+			<system-out>{
+  &quot;letters&quot; : [ {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/a&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/a&quot;,
+    &quot;basename&quot; : &quot;a&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/b&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/b&quot;,
+    &quot;basename&quot; : &quot;b&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/c&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/c&quot;,
+    &quot;basename&quot; : &quot;c&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/w&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/w&quot;,
+    &quot;basename&quot; : &quot;w&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/x&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/x&quot;,
+    &quot;basename&quot; : &quot;x&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/y&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/y&quot;,
+    &quot;basename&quot; : &quot;y&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }, {
+    &quot;location&quot; : &quot;file:///tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/z&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078/z&quot;,
+    &quot;basename&quot; : &quot;z&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpts3xfu57/glob_test-cd0e1393-cc8c-4511-9040-cf27b07a6078&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  } ]
+}
+</system-out>
+		</testcase>
+		<testcase class="initial_work_dir" name="Test InitialWorkDirRequirement with a nested directory structure from another step" time="14.060521">
+			<system-out>{
+  &quot;ya_empty&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpeh8h7jgb/iwdr_with_nested_dirs-f69760cc-ab6d-425f-b32e-8a37cbd50fa8/ya&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpeh8h7jgb/iwdr_with_nested_dirs-f69760cc-ab6d-425f-b32e-8a37cbd50fa8/ya&quot;,
+    &quot;basename&quot; : &quot;ya&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpeh8h7jgb/iwdr_with_nested_dirs-f69760cc-ab6d-425f-b32e-8a37cbd50fa8&quot;,
+    &quot;checksum&quot; : &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,
+    &quot;size&quot; : 0,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test that boolean flags do not appear on command line if inputBinding is empty and not null" time="14.057739">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpo9bhdjv_ --quiet v1.0/bool-empty-inputbinding.cwl v1.0/bool-empty-inputbinding-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpo9bhdjv_ --quiet v1.0/bool-empty-inputbinding.cwl v1.0/bool-empty-inputbinding-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:30:23.869] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(146): Wait condition is never satisfied)
+[09:30:23.871] ERROR - The job (bool-empty-inputbinding) exited.
+</system-err>
+		</testcase>
+		<testcase class="inline_javascript" name="Test that expression engine does not fail to evaluate reference to self with unprovided input" time="15.892282">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp7fa7ia66 --quiet v1.0/stage-unprovided-file.cwl v1.0/empty.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmp7fa7ia66 --quiet v1.0/stage-unprovided-file.cwl v1.0/empty.json' returned non-zero exit status 127</failure>
+			<system-err>[09:30:38.821] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(147): Wait condition is never satisfied)
+[09:30:38.825] ERROR - The job (stage-unprovided-file) exited.
+</system-err>
+		</testcase>
+		<testcase class="required" name="Test successCodes" time="12.181889">
+			<system-out>{ }
+</system-out>
+		</testcase>
+		<testcase class="resource" name="Test simple workflow with a dynamic resource requirement" time="14.007138">
+			<system-out>{
+  &quot;cores&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpesnk6vzr/dynresreq-workflow-300dfc46-1046-4e6f-ae78-542de201dffa/output&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpesnk6vzr/dynresreq-workflow-300dfc46-1046-4e6f-ae78-542de201dffa/output&quot;,
+    &quot;basename&quot; : &quot;output&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpesnk6vzr/dynresreq-workflow-300dfc46-1046-4e6f-ae78-542de201dffa&quot;,
+    &quot;checksum&quot; : &quot;sha1$7448d8798a4380162d4b56f9b452e2f6f9e24e7a&quot;,
+    &quot;size&quot; : 2,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="required" name="Test that empty array input does not add anything to command line" time="11.272310">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpd2pqw1dl --quiet v1.0/empty-array-input.cwl v1.0/empty-array-job.json' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmpd2pqw1dl --quiet v1.0/empty-array-input.cwl v1.0/empty-array-job.json' returned non-zero exit status 127</failure>
+			<system-err>[09:31:17.219] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(151): Wait condition is never satisfied)
+[09:31:17.221] ERROR - The job (empty-array-input) exited.
+</system-err>
+		</testcase>
+		<testcase class="resource" name="Test that ResourceRequirement on a step level redefines requirement on the workflow level" time="8.833806">
+			<system-out>{
+  &quot;out&quot; : {
+    &quot;location&quot; : &quot;file:///tmp/tmpinxga5kp/steplevel-resreq-e041279a-a76f-41ed-b237-71a8c453e3e9/cores.txt&quot;,
+    &quot;path&quot; : &quot;/tmp/tmpinxga5kp/steplevel-resreq-e041279a-a76f-41ed-b237-71a8c453e3e9/cores.txt&quot;,
+    &quot;basename&quot; : &quot;cores.txt&quot;,
+    &quot;dirname&quot; : &quot;/tmp/tmpinxga5kp/steplevel-resreq-e041279a-a76f-41ed-b237-71a8c453e3e9&quot;,
+    &quot;nameroot&quot; : &quot;cores&quot;,
+    &quot;nameext&quot; : &quot;.txt&quot;,
+    &quot;checksum&quot; : &quot;sha1$e5fa44f2b31c1fb553b6021e7360d07d5d91ff5e&quot;,
+    &quot;size&quot; : 2,
+    &quot;class&quot; : &quot;File&quot;
+  }
+}
+</system-out>
+		</testcase>
+		<testcase class="inline_javascript" name="Test valueFrom with constant value overriding provided array inputs" time="12.093951">
+			<failure message="Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphs8jkcni --quiet v1.0/valueFrom-constant.cwl v1.0/array-of-strings-job.yml' returned non-zero exit status 127" type="failure">Command '/cwlexec-0.1/cwlexec --outdir=/tmp/tmphs8jkcni --quiet v1.0/valueFrom-constant.cwl v1.0/array-of-strings-job.yml' returned non-zero exit status 127</failure>
+			<system-err>[09:31:38.152] ERROR - The bwait command failed to execute (exitCode=2, exitMsg=done(153): Wait condition is never satisfied)
+[09:31:38.153] ERROR - The job (valueFrom-constant) exited.
+</system-err>
+		</testcase>
+	</testsuite>
+</testsuites>
