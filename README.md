@@ -13,7 +13,7 @@ To run the test:
 
 ```
 cd lsf-ce-10.1
-docker build .
+docker build --tag lsf-ce-10.1 .
 ```
 
 Current results: `75 tests passed, 34 failures, 19 unsupported features`
@@ -38,7 +38,8 @@ https://www-01.ibm.com/marketing/iwm/iwm/web/preLogin.do?source=swerpsysz-lsf-3
 cd lsf-eval-10.1.0.4
 cp $DOWNLOAD/lsf10.1_lsfinstall_linux_x86_64.tar.Z .
 cp $DOWNLOAD/lsf10.1_linux2.6-glibc2.3-x86_64.tar.Z .
-docker build .
+docker build --tag lsf-eval-10.1.0.4 .
+docker run -v /var/run/docker.sock:/var/run/docker.sock lsf-eval-10.1.0.4
 ```
 
 Current results: `73 tests passed, 36 failures, 19 unsupported features`
