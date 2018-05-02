@@ -26,4 +26,9 @@ COPY ./install.config /root/
 RUN cd /root/lsf10.1_lsfinstall/ && echo 1 | ./lsfinstall -f /root/install.config
 ADD https://github.com/common-workflow-language/common-workflow-language/archive/master.tar.gz /root
 RUN tar xzf /root/cwl*tar.gz && tar xzf /root/master*tar.gz
+RUN echo LSB_RESOURCE_ENFORCE=\"cpu memory\" >> /usr/share/lsf/conf/lsf.conf && \
+	sed -i '/End Resource/i \
+   docker     Boolean ()       ()         (Docker container)' \
+	/usr/share/lsf/conf/lsf.shared && sed -i 's/mg/mg docker/' \
+	/usr/share/lsf/conf/lsf.cluster.cluster1
 RUN ["/bin/sh", "-c", ". /usr/share/lsf/conf/profile.lsf && sed -i s/coordinator/$(hostname)/g /usr/share/lsf/conf/lsf.cluster.cluster1 /usr/share/lsf/conf/lsf.conf /usr/share/lsf/conf/lsbatch/cluster1/configdir/lsb.hosts /usr/share/lsf/conf/ego/cluster1/kernel/ego.conf && /usr/share/lsf/10.1/install/hostsetup --top=/usr/share/lsf && service ssh start && ssh-keyscan $(hostname) >> ~/.ssh/known_hosts && yes | lsfstartup && lsid && su lsfadmin -c 'source /usr/share/lsf/conf/profile.lsf && lshosts && /common-workflow-language-master/run_test.sh RUNNER=/cwlexec-0.1/cwlexec --junit-xml=/home/lsfadmin/cwlexec-0.1.xml' || /bin/true"]

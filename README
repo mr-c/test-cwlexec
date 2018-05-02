@@ -26,8 +26,8 @@ and workers ("slave") hosts.
 More on the differences between the LSF editions:
 https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/New%20IBM%20Platform%20LSF%20Wiki/page/LSF%20Community%20Edition%20and%20LSF%20Suites%20compared
 
-IBM Spectrum LSF 10.1.0.4 evaluation version
---------------------------------------------
+IBM Spectrum LSF 10.1.0.4 Nov 20 2017 evaluation version
+--------------------------------------------------------
 
 This time limited evaluation version does not contain any restrictions on the
 number of processors.
@@ -42,7 +42,6 @@ docker build .
 ```
 
 Current results: `73 tests passed, 36 failures, 19 unsupported features`
-
 
 ---
 Docker notes
