@@ -21,8 +21,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install cwltest
 RUN adduser --disabled-password --gecos '' lsfadmin
 RUN ssh-keygen -f /root/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys && \
-	echo PubkeyAuthentication yes >> /etc/ssh/sshd_config && \
-	service ssh start
+	echo PubkeyAuthentication yes >> /etc/ssh/sshd_config
 COPY ./install.config /root/
 RUN cd /root/lsf10.1_lsfinstall/ && echo 1 | ./lsfinstall -f /root/install.config
-RUN ["/bin/sh", "-c", ". /usr/share/lsf/conf/profile.lsf && sed -i s/coordinator/$(hostname)/g /usr/share/lsf/conf/lsf.cluster.cluster1 /usr/share/lsf/conf/lsf.conf /usr/share/lsf/conf/lsbatch/cluster1/configdir/lsb.hosts && /usr/share/lsf/10.1/install/hostsetup --top=/usr/share/lsf && lsfstartup && lsid"]
+ADD https://github.com/common-workflow-language/common-workflow-language/archive/master.tar.gz /root
+RUN tar xzf /root/cwl*tar.gz && tar xzf /root/master*tar.gz
+RUN ["/bin/sh", "-c", ". /usr/share/lsf/conf/profile.lsf && sed -i s/coordinator/$(hostname)/g /usr/share/lsf/conf/lsf.cluster.cluster1 /usr/share/lsf/conf/lsf.conf /usr/share/lsf/conf/lsbatch/cluster1/configdir/lsb.hosts /usr/share/lsf/conf/ego/cluster1/kernel/ego.conf && /usr/share/lsf/10.1/install/hostsetup --top=/usr/share/lsf && service ssh start && ssh-keyscan $(hostname) >> ~/.ssh/known_hosts && yes | lsfstartup && lsid && su lsfadmin -c 'source /usr/share/lsf/conf/profile.lsf && lshosts && /common-workflow-language-master/run_test.sh RUNNER=/cwlexec-0.1/cwlexec --junit-xml /home/lsfadmin/cwlexec-0.1.xml' || /bin/true"]
