@@ -13,10 +13,10 @@ RUN apt-get update && apt-get install -y \
         python3-wheel \
         software-properties-common \
         vim-tiny \
-  && curl -fsSL https://download.docker.com/linux/debian/gpg \
+  && curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
   | apt-key add - && \
   add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
   && apt-get update && apt-get -y install docker-ce \
   && rm -rf /var/lib/apt/lists/*
 RUN pip3 install cwltest
