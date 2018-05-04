@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	gnupg2 \
 	openjdk-8-jre-headless \
         openssh-server \
+	python-minimal \
 	python3-pip \
 	python3-setuptools\
         python3-wheel \
@@ -35,11 +36,11 @@ COPY ./lsf10.1_linux2.6-glibc2.3-x86_64.tar.Z /root/
 RUN tar xzf /root/lsf10.1_lsfinstall_linux_x86_64.tar.Z --directory /root
 COPY ./install.config /root/
 RUN cd /root/lsf10.1_lsfinstall/ && echo 1 | ./lsfinstall -f /root/install.config
-RUN echo LSB_RESOURCE_ENFORCE=\"cpu memory\" >> /usr/share/lsf/conf/lsf.conf && \
-	sed -i '/End Resource/i \
-   docker     Boolean ()       ()         (Docker container)' \
-	/usr/share/lsf/conf/lsf.shared && sed -i 's/mg/mg docker/' \
-	/usr/share/lsf/conf/lsf.cluster.cluster1
+# RUN echo LSB_RESOURCE_ENFORCE=\"cpu memory\" >> /usr/share/lsf/conf/lsf.conf && \
+# 	sed -i '/End Resource/i \
+#    docker     Boolean ()       ()         (Docker container)' \
+# 	/usr/share/lsf/conf/lsf.shared && sed -i 's/mg/mg docker/' \
+# 	/usr/share/lsf/conf/lsf.cluster.cluster1
 COPY --from=cwlexec-builder --chown=lsfadmin:lsfadmin /root/cwlexec-master /home/lsfadmin/cwlexec-master
 RUN ssh-keygen -q -f /root/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub \
 	> ~/.ssh/authorized_keys && echo PubkeyAuthentication yes \
