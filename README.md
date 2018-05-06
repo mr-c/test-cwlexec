@@ -1,10 +1,11 @@
 This repository documents testing various version and configurations of IBM
-Spectrum LSF and their Common Workflow Language exectutor (CWLEXEC) against the
+Spectrum LSF and their Common Workflow Language executor (CWLEXEC) against the
 CWL v1.0 conformance tests.
 
 IBM Spectrum LSF Community Edition 10.1
 ---------------------------------------
-This edition of LSF does not include the LSF Docker for workloads feature.
+This edition of LSF does not include the LSF Docker for workloads feature, but
+cwlexec and bsub users are able to call docker directly (if available)
 
 It is limited to single or dual-socket processor hosts; so a VM (or real machine) with
 only one or two CPU sockets is supported.
@@ -13,7 +14,11 @@ To run the test:
 
 ```
 cd lsf-ce-10.1
-docker build --tag lsf-ce-10.1 .
+docker build --tag lsf-ce-10.1-cwlexec .
+
+docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
+	-v /home/${USER}/cwl-workdir:/home/${USER}/cwl-workdir:rw \
+	lsf-ce-10.1-cwlexec
 ```
 
 Current results: `75 tests passed, 34 failures, 19 unsupported features`
