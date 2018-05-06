@@ -8,7 +8,7 @@ usermod -a -G docker ${user}
 cp -r /home/lsfadmin/cwlexec* /home/${user}
 chown ${user} /home/${user} /home/${user}/cwlexec*
 chmod +777 /home/${user}
-chmod +777 /home/${user}/cwlexec* -R
+chmod +777 /home/${user}/cwl* -R
 source /opt/ibm/lsfsuite/lsf/conf/profile.lsf
 source <(head -n265 /start_lsf_ce.sh | tail -n +7)
 ROLE=master config_lsfce
