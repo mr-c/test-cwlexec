@@ -1,4 +1,12 @@
 #!/bin/bash
+user=$1
+useradd ${user}
+mkhomedir_helper ${user}
+find / -group docker -exec chgrp -hf --reference /var/run/docker.sock {} \;
+groupmod --gid $(stat --format %g /var/run/docker.sock) docker
+usermod -a -G docker ${user}
+cp -r /home/lsfadmin/cwlexec-master /home/${user}
+chmod +777 /home/${user}/cwlexec-master -r
 source /opt/ibm/lsfsuite/lsf/conf/profile.lsf
 source <(head -n265 /start_lsf_ce.sh | tail -n +7)
 ROLE=master config_lsfce
