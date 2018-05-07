@@ -21,7 +21,7 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
 	lsf-ce-10.1-cwlexec ${USER}
 ```
 
-Current results: `75 tests passed, 34 failures, 19 unsupported features`
+Current results: `105 tests passed, 4 failures, 19 unsupported features`
 
 I don't know of any Docker container executor that correctly lies/presents the
 number of processors actually available, so a VM or real machine with no more
