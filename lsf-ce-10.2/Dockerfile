@@ -38,4 +38,4 @@ RUN tar xzf /home/lsfadmin/cwlexec-master/target/*.tar.gz --directory /home/lsfa
 USER root
 RUN tar xzf master.tar.gz
 ADD run.sh /
-ENTRYPOINT /run.sh
+ENTRYPOINT ["/run.sh"]
