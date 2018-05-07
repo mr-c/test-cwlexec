@@ -18,7 +18,7 @@ docker build --tag lsf-ce-10.1-cwlexec .
 
 docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
 	-v /home/${USER}/cwl-workdir:/home/${USER}/cwl-workdir:rw \
-	lsf-ce-10.1-cwlexec
+	lsf-ce-10.1-cwlexec ${USER}
 ```
 
 Current results: `75 tests passed, 34 failures, 19 unsupported features`

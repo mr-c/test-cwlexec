@@ -18,5 +18,5 @@ lshosts
 su ${user} -c 'source /opt/ibm/lsfsuite/lsf/conf/profile.lsf && \
 	/common-workflow-language-master/run_test.sh \
 	RUNNER=~/cwlexec-0.1/cwlexec \
-	--junit-xml=~/cwlexec-0.1.xml' || /bin/true
+	--junit-xml=~/cwl-workdir/cwlexec-0.1.xml' || /bin/true
 
