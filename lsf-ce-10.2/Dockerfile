@@ -31,11 +31,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get update && apt-get -y install docker-ce \
   && rm -rf /var/lib/apt/lists/*
 RUN pip3 install cwltest
-ADD https://github.com/common-workflow-language/common-workflow-language/archive/master.tar.gz /
 COPY --from=cwlexec-builder --chown=lsfadmin:lsfadmin /root/cwlexec-master /home/lsfadmin/cwlexec-master
 USER lsfadmin
 RUN tar xzf /home/lsfadmin/cwlexec-master/target/*.tar.gz --directory /home/lsfadmin
 USER root
-RUN tar xzf master.tar.gz
+COPY common-workflow-language /cwl
 ADD run.sh /
 ENTRYPOINT ["/run.sh"]

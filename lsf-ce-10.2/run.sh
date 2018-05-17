@@ -16,7 +16,7 @@ ROLE=master start_lsf
 lsid
 lshosts
 su ${user} -c "source /opt/ibm/lsfsuite/lsf/conf/profile.lsf && \
-	/common-workflow-language-master/run_test.sh \
+	/cwl/run_test.sh \
 	RUNNER=~/cwlexec-0.1/cwlexec \
 	--junit-xml=/home/${user}/cwl-workdir/cwlexec.xml" || /bin/true
 

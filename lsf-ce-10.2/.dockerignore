@@ -1,3 +1,4 @@
 *.xml
 Dockerfile
 .dockerignore
+common-workflow-language/.git

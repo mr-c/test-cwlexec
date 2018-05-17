@@ -14,6 +14,7 @@ To run the test:
 
 ```
 cd lsf-ce-10.1
+git clone https://github.com/common-workflow-language/common-workflow-language.git
 docker build --tag lsf-ce-10.1-cwlexec .
 
 docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
