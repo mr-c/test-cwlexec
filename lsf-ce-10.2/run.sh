@@ -17,6 +17,6 @@ lsid
 lshosts
 su ${user} -c "source /opt/ibm/lsfsuite/lsf/conf/profile.lsf && \
 	/cwl/run_test.sh \
-	RUNNER=~/cwlexec-0.1/cwlexec \
+	RUNNER=~/cwlexec-*/cwlexec \
 	--junit-xml=/home/${user}/cwl-workdir/cwlexec.xml" || /bin/true
 
